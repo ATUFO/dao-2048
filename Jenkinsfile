@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'echo 3'
+        sh 'echo ${params.DEPLOY_NAME}'
       }
     }
 
