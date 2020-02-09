@@ -8,4 +8,7 @@ pipeline {
     }
 
   }
+  environment {
+    DEPLOY_NAME = 'TEST'
+  }
 }
