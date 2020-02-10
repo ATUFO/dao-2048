@@ -18,12 +18,6 @@ pipeline {
       }
     }
 
-    stage('docker') {
-      withEnv(["DOCKER_HOST = tcp://tttfu.top:2375"]) 
-    {
-        sh 'docker ps -a'
-    }
-
   }
 }
   environment {
