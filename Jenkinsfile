@@ -9,7 +9,7 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
             mail(subject: 'twst', body: 'test', to: '2221057667@qq.com')
           }
@@ -18,8 +18,15 @@ pipeline {
       }
     }
 
+    stage('docker') {
+      steps {
+        sh 'docker ps -a'
+      }
+    }
+
   }
   environment {
     DEPLOY_NAME = 'TEST'
+    docker_host = 'tcp://tttfu.top:2375'
   }
 }
